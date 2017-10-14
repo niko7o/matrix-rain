@@ -2,7 +2,7 @@
 // Credits to emilyxxie & The Coding Train team
 // I do not own any of the audio contents
 // "Clubbed to Death" is a 1995 instrumental
-// composition by Rob Dougan. 
+// composition by Rob Dougan.
 
 var streams = [];
 var letterScale = 18;
@@ -45,16 +45,16 @@ function Symbol(x, y, speed, firstLetter, opacity) {
   this.generateRandom = function() {
     if (frameCount % this.interval == 0) {
       this.value = String.fromCharCode(
-        0x30A0 + round(random(0, 96)) //create a random japanese kana symbol
+        0x30A0 + round(random(0, 96)) // create a random japanese kana symbol
       );
     }
   }
 
   this.render = function() {
     this.generateRandom();
-    text(this.value, this.x, this.y); //draw it
-    fill(0, 255, 0); //give it a full green color in rgb values
-    this.rain(); //make it rain!!
+    text(this.value, this.x, this.y); // draw it
+    fill(0, 255, 0); // give it a full green color in rgb values
+    this.rain(); // make it rain!!
   }
 
   this.rain = function() {
@@ -72,7 +72,7 @@ function Stream() {
   this.speed = random(2, 10);
 
   this.generateSymbols = function(x, y) {
-    var firstLetter = true; //the firstLetter generated symbol is identified right before entering the loop (rest of symbols)
+    var firstLetter = true; // the firstLetter generated symbol is identified right before entering the loop (rest of symbols)
     var opacity = 255;
 
     for(var i=0; i <= this.range; i++) {
