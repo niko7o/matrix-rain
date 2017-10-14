@@ -5,7 +5,7 @@
 // composition by Rob Dougan.
 
 var streams = [];
-var letterScale = 18;
+var letterScale = 24;
 var audio = new Audio('clubbedtodeath.mp3');
 audio.play();
 
